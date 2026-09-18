@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#06111f" />
+  <meta name="theme-color" content="#091827" />
   <meta name="color-scheme" content="dark" />
 
   <title>سوني 4 معدل وسوني فور برو معدل | BEST GAMES</title>
@@ -21,7 +21,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -60,21 +60,21 @@
 
   <style>
     :root{
-      --bg:#06111f;
-      --bg-2:#081626;
-      --surface:#0b1a2d;
-      --surface-2:#10223a;
-      --surface-3:#0a1728;
+      --bg:#091827;
+      --bg-2:#0b1e31;
+      --surface:#10253b;
+      --surface-2:#15304b;
+      --surface-3:#0d2034;
       --line:rgba(142,215,255,.14);
       --line-soft:rgba(255,255,255,.08);
       --text:#f6fbff;
-      --muted:#91a7bc;
+      --muted:#9eb3c6;
       --blue:#32b8ff;
       --blue-2:#248dff;
       --cyan:#73e8ff;
       --navy:#0c2a47;
       --green:#25D366;
-      --shadow:0 22px 62px rgba(0,0,0,.34);
+      --shadow:0 22px 62px rgba(0,0,0,.28);
     }
 
     *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -84,11 +84,11 @@
       min-height:100svh;
       color:var(--text);
       overflow-x:hidden;
-      font-family:"Tajawal",system-ui,sans-serif;
+      font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;
       background:
         radial-gradient(circle at 15% -4%,rgba(50,184,255,.16),transparent 27%),
         radial-gradient(circle at 90% 16%,rgba(36,141,255,.12),transparent 25%),
-        linear-gradient(180deg,#071524 0%,#06111f 48%,#050d18 100%);
+        linear-gradient(180deg,#0b2134 0%,#091827 48%,#071421 100%);
     }
 
     body::before{
@@ -137,7 +137,7 @@
 
     .identity-copy{display:flex;flex-direction:column;gap:2px;min-width:0}
     .identity-copy strong{
-      font-family:"Alexandria",sans-serif;
+      font-family:"IBM Plex Sans Arabic",sans-serif;
       font-size:12px;
       font-weight:700;
       letter-spacing:.35px;
@@ -167,7 +167,7 @@
       border:1px solid rgba(115,232,255,.15);
       padding:28px 22px 25px;
       background:
-        linear-gradient(145deg,rgba(16,42,70,.96),rgba(7,22,39,.98)),
+        linear-gradient(145deg,rgba(22,57,88,.96),rgba(11,34,55,.98)),
         var(--surface);
       box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.055);
       animation:rise .62s .04s cubic-bezier(.2,.8,.2,1) both;
@@ -198,6 +198,7 @@
       border:1px solid rgba(115,232,255,.06);
       border-radius:25px;
       pointer-events:none;
+      animation:frameBreath 5.6s ease-in-out infinite;
     }
     .frame-lines::before,.frame-lines::after{
       content:"";
@@ -227,7 +228,7 @@
 
     h1{
       margin:16px 0 9px;
-      font-family:"Alexandria",sans-serif;
+      font-family:"IBM Plex Sans Arabic",sans-serif;
       font-size:clamp(29px,8vw,40px);
       line-height:1.18;
       letter-spacing:-1px;
@@ -266,7 +267,7 @@
     }
     .section-head h2{
       margin:0;
-      font-family:"Alexandria",sans-serif;
+      font-family:"IBM Plex Sans Arabic",sans-serif;
       font-size:14px;
       font-weight:700;
     }
@@ -282,17 +283,19 @@
       content:"";
       position:absolute;
       inset:9px;
-      border:1px solid rgba(115,232,255,.045);
+      border:1px solid rgba(115,232,255,.055);
       border-radius:inherit;
       pointer-events:none;
+      animation:frameBreath 4.8s ease-in-out infinite;
     }
     .card-frame::after{
       content:"";
       position:absolute;
       width:130px;height:130px;border-radius:50%;
       left:-55px;bottom:-68px;
-      background:radial-gradient(circle,rgba(50,184,255,.18),transparent 68%);
+      background:radial-gradient(circle,rgba(50,184,255,.20),transparent 68%);
       pointer-events:none;
+      animation:glowDrift 6.2s ease-in-out infinite;
     }
 
     .store-card{
@@ -306,7 +309,7 @@
       border-radius:28px;
       background:
         radial-gradient(circle at 86% 18%,rgba(115,232,255,.13),transparent 22%),
-        linear-gradient(135deg,#0f2a48,#0b1e34 54%,#0b1829);
+        linear-gradient(135deg,#143858,#102a43 54%,#0d2135);
       opacity:0;transform:translateY(12px);
       animation:cardIn .55s .10s ease forwards;
       transition:.18s ease;
@@ -329,7 +332,7 @@
     .store-copy{display:flex;flex-direction:column;gap:4px;position:relative;z-index:1;min-width:0}
     .store-copy small{font-size:9px;letter-spacing:.55px;color:#7f9bb3}
     .store-copy strong{
-      font-family:"Alexandria",sans-serif;
+      font-family:"IBM Plex Sans Arabic",sans-serif;
       font-size:18px;
       font-weight:700;
     }
@@ -362,7 +365,7 @@
       color:var(--text);
       text-decoration:none;
       border-radius:25px;
-      background:linear-gradient(135deg,rgba(15,38,63,.98),rgba(8,24,41,.98));
+      background:linear-gradient(135deg,rgba(20,50,78,.98),rgba(11,32,52,.98));
       opacity:0;transform:translateY(12px);
       animation:cardIn .55s ease forwards;
       transition:.18s ease;
@@ -394,7 +397,7 @@
     }
     .community-copy small{font-size:9px;color:#7992a9;letter-spacing:.45px}
     .community-copy strong{
-      font-family:"Alexandria",sans-serif;
+      font-family:"IBM Plex Sans Arabic",sans-serif;
       font-size:13px;
       line-height:1.55;
       font-weight:700;
@@ -411,7 +414,7 @@
       text-decoration:none;
       background:
         radial-gradient(circle at 88% 18%,rgba(37,211,102,.11),transparent 22%),
-        linear-gradient(135deg,#102a32,#091b26);
+        linear-gradient(135deg,#153941,#0d2935);
       opacity:0;transform:translateY(12px);
       animation:cardIn .55s .28s ease forwards;
       transition:.18s ease;
@@ -457,7 +460,7 @@
       border:1px solid rgba(115,232,255,.15);
       background:linear-gradient(145deg,rgba(50,184,255,.16),rgba(36,141,255,.07));
       color:#dff8ff;
-      font-family:"Alexandria",sans-serif;
+      font-family:"IBM Plex Sans Arabic",sans-serif;
       font-size:17px;
       font-weight:800;
     }
@@ -494,6 +497,22 @@
     }
     @keyframes cardIn{
       to{opacity:1;transform:none}
+    }
+    @keyframes frameBreath{
+      0%,100%{
+        border-color:rgba(115,232,255,.045);
+        box-shadow:0 0 0 rgba(50,184,255,0);
+        opacity:.72;
+      }
+      50%{
+        border-color:rgba(115,232,255,.19);
+        box-shadow:0 0 24px rgba(50,184,255,.09);
+        opacity:1;
+      }
+    }
+    @keyframes glowDrift{
+      0%,100%{transform:translate3d(0,0,0);opacity:.72}
+      50%{transform:translate3d(20px,-12px,0);opacity:1}
     }
 
     @media (hover:hover){
@@ -643,7 +662,7 @@
         <span class="aziz-mark" aria-hidden="true">3</span>
         <span class="credit-copy">
           <small>DESIGN & EXPERIENCE</small>
-          <strong>تصميم وتطوير تجربة المستخدم بواسطة Aziz Lab</strong>
+          <strong>تنفيذ التصميم وتجربة المستخدم لهذه الصفحة بواسطة 3ziz Lab</strong>
         </span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M7 17 17 7M8 7h9v9"/>
