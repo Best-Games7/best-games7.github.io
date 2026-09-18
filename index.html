@@ -438,16 +438,18 @@
     .credit{
       position:relative;
       overflow:hidden;
-      display:flex;align-items:center;gap:11px;
-      padding:12px 13px;
-      border:1px solid rgba(115,232,255,.10);
-      border-radius:20px;
+      min-height:93px;
+      display:flex;
+      align-items:center;
+      gap:13px;
+      padding:15px 16px;
+      border-radius:25px;
       color:#dcebf7;
       text-decoration:none;
       background:
-        radial-gradient(circle at 0% 100%,rgba(50,184,255,.10),transparent 30%),
-        rgba(255,255,255,.03);
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+        radial-gradient(circle at 88% 18%,rgba(141,11,11,.10),transparent 22%),
+        linear-gradient(135deg,rgba(20,50,78,.98),rgba(11,32,52,.98));
+      box-shadow:0 18px 48px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.045);
       transition:.18s ease;
     }
     .credit:active{transform:scale(.985)}
@@ -472,7 +474,7 @@
     .credit-copy{display:flex;flex-direction:column;gap:2px;min-width:0}
     .credit-copy small{font-size:8.5px;color:#6f879d;letter-spacing:.5px}
     .credit-copy strong{font-size:11px;font-weight:700;line-height:1.55}
-    .credit svg{width:16px;height:16px;margin-inline-start:auto;color:#7edfff}
+    .credit .arrow{margin-inline-start:auto}
 
     .toast{
       position:fixed;
@@ -662,15 +664,17 @@
     </section>
 
     <footer>
-      <a class="credit" href="https://3zizlab.com" target="_blank" rel="noopener noreferrer" aria-label="عجبتك التجربة؟ نصنع لك تجربة تليق فيك — 3ziz Lab">
+      <a class="credit card-frame" href="https://3zizlab.com" target="_blank" rel="noopener noreferrer" aria-label="تبغى تجربة تليق بعلامتك؟ خلّها علينا — 3ziz Lab">
         <span class="aziz-mark" aria-hidden="true"><img src="assets/3ziz-lab-mark.svg" alt="" width="42" height="42" /></span>
         <span class="credit-copy">
           <small>3ZIZ LAB</small>
-          <strong>عجبتك التجربة؟ نصنع لك تجربة تليق فيك — 3ziz Lab</strong>
+          <strong>تبغى تجربة تليق بعلامتك؟ خلّها علينا — 3ziz Lab</strong>
         </span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M7 17 17 7M8 7h9v9"/>
-        </svg>
+        <span class="arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+        </span>
       </a>
     </footer>
 
