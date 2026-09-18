@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#060b17" />
+  <meta name="theme-color" content="#06111f" />
   <meta name="color-scheme" content="dark" />
 
   <title>سوني 4 معدل وسوني فور برو معدل | BEST GAMES</title>
@@ -18,6 +18,10 @@
   <meta property="og:description" content="متجر ومجتمع BEST GAMES لسوني 4 المعدل وسوني فور برو المعدل: المتجر الرسمي، الدعم، الشروحات ومجتمعات تيليجرام." />
   <meta property="og:image" content="https://cdn.salla.sa/xArQDz/TH0uwccAW8ilcKDx59FFgmtgWqgkyA73L1QkUxL8.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -56,18 +60,21 @@
 
   <style>
     :root{
-      --bg:#060b17;
-      --panel:#0c1425;
-      --panel-2:#101a31;
-      --line:rgba(255,255,255,.10);
-      --text:#f7fbff;
-      --muted:#91a2bd;
-      --blue:#38bdf8;
-      --blue-2:#2563eb;
-      --violet:#7c3aed;
-      --cyan:#67e8f9;
-      --green:#34d399;
-      --shadow:0 28px 80px rgba(0,0,0,.42);
+      --bg:#06111f;
+      --bg-2:#081626;
+      --surface:#0b1a2d;
+      --surface-2:#10223a;
+      --surface-3:#0a1728;
+      --line:rgba(142,215,255,.14);
+      --line-soft:rgba(255,255,255,.08);
+      --text:#f6fbff;
+      --muted:#91a7bc;
+      --blue:#32b8ff;
+      --blue-2:#248dff;
+      --cyan:#73e8ff;
+      --navy:#0c2a47;
+      --green:#25D366;
+      --shadow:0 22px 62px rgba(0,0,0,.34);
     }
 
     *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -77,11 +84,11 @@
       min-height:100svh;
       color:var(--text);
       overflow-x:hidden;
-      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",Tahoma,Arial,sans-serif;
+      font-family:"Tajawal",system-ui,sans-serif;
       background:
-        radial-gradient(circle at 12% -5%,rgba(56,189,248,.22),transparent 28%),
-        radial-gradient(circle at 92% 24%,rgba(124,58,237,.22),transparent 26%),
-        linear-gradient(180deg,#08101f 0%,#060b17 46%,#050914 100%);
+        radial-gradient(circle at 15% -4%,rgba(50,184,255,.16),transparent 27%),
+        radial-gradient(circle at 90% 16%,rgba(36,141,255,.12),transparent 25%),
+        linear-gradient(180deg,#071524 0%,#06111f 48%,#050d18 100%);
     }
 
     body::before{
@@ -89,20 +96,21 @@
       position:fixed;
       inset:0;
       pointer-events:none;
-      opacity:.18;
-      background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
-      background-size:28px 28px;
-      mask-image:linear-gradient(to bottom,black,transparent 82%);
+      opacity:.20;
+      background:
+        linear-gradient(rgba(115,232,255,.018) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(115,232,255,.018) 1px,transparent 1px);
+      background-size:30px 30px;
+      mask-image:linear-gradient(to bottom,#000 0%,transparent 78%);
     }
 
+    a,button{font:inherit}
     .app{
-      width:min(100%,480px);
+      width:min(100%,470px);
       margin:0 auto;
-      padding:calc(18px + env(safe-area-inset-top)) 16px calc(26px + env(safe-area-inset-bottom));
+      min-height:100svh;
+      padding:calc(18px + env(safe-area-inset-top)) 16px calc(24px + env(safe-area-inset-bottom));
       position:relative;
-      isolation:isolate;
     }
 
     .topbar{
@@ -110,386 +118,413 @@
       align-items:center;
       justify-content:space-between;
       gap:12px;
-      margin-bottom:17px;
-      animation:fadeDown .55s ease both;
+      margin-bottom:14px;
+      animation:rise .5s ease both;
     }
 
-    .brand-pill{
+    .identity{
       display:flex;
       align-items:center;
       gap:10px;
       min-width:0;
-      padding:7px 10px 7px 8px;
-      border:1px solid var(--line);
-      border-radius:18px;
-      background:rgba(255,255,255,.055);
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
     }
 
-    .brand-pill img{
-      width:34px;height:34px;object-fit:cover;border-radius:11px;
-      box-shadow:0 7px 18px rgba(0,0,0,.30);
+    .identity-logo{
+      width:43px;height:43px;border-radius:15px;object-fit:cover;
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 10px 24px rgba(0,0,0,.28);
     }
 
-    .brand-copy{min-width:0;display:flex;flex-direction:column;line-height:1.05}
-    .brand-copy strong{font-size:12px;letter-spacing:.6px;white-space:nowrap}
-    .brand-copy span{font-size:9px;color:var(--muted);margin-top:4px;letter-spacing:.7px;text-transform:uppercase}
+    .identity-copy{display:flex;flex-direction:column;gap:2px;min-width:0}
+    .identity-copy strong{
+      font-family:"Alexandria",sans-serif;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.35px;
+    }
+    .identity-copy span{font-size:9px;color:var(--muted);letter-spacing:.7px}
 
     .share{
-      width:45px;height:45px;border:1px solid var(--line);border-radius:16px;
-      display:grid;place-items:center;color:var(--text);
-      background:rgba(255,255,255,.055);
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
+      width:44px;height:44px;
+      display:grid;place-items:center;
+      border:1px solid var(--line-soft);
+      border-radius:15px;
+      color:#dff7ff;
+      background:rgba(255,255,255,.045);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
       cursor:pointer;
-      transition:transform .18s ease,background .18s ease,border-color .18s ease;
+      transition:.18s ease;
     }
-    .share:active{transform:scale(.93)}
+    .share:active{transform:scale(.94)}
     .share svg{width:20px;height:20px}
 
     .hero{
       position:relative;
       overflow:hidden;
-      min-height:250px;
-      border:1px solid rgba(255,255,255,.11);
-      border-radius:34px;
-      padding:26px 24px 24px;
+      border-radius:32px;
+      border:1px solid rgba(115,232,255,.15);
+      padding:28px 22px 25px;
       background:
-        radial-gradient(circle at 10% 10%,rgba(103,232,249,.18),transparent 32%),
-        linear-gradient(135deg,rgba(20,31,58,.96),rgba(8,16,31,.96));
-      box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.07);
-      animation:heroIn .7s cubic-bezier(.2,.8,.2,1) both;
+        linear-gradient(145deg,rgba(16,42,70,.96),rgba(7,22,39,.98)),
+        var(--surface);
+      box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.055);
+      animation:rise .62s .04s cubic-bezier(.2,.8,.2,1) both;
     }
 
     .hero::before{
       content:"";
       position:absolute;
-      width:240px;height:240px;
-      border-radius:50%;
-      left:-92px;top:-102px;
-      background:radial-gradient(circle,rgba(56,189,248,.38),rgba(37,99,235,.16) 43%,transparent 70%);
-      filter:blur(2px);
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at 12% 5%,rgba(115,232,255,.22),transparent 28%),
+        radial-gradient(circle at 100% 100%,rgba(36,141,255,.16),transparent 35%);
     }
 
     .hero::after{
       content:"";
       position:absolute;
-      width:190px;height:190px;
-      right:-68px;bottom:-88px;
-      border:1px solid rgba(103,232,249,.13);
-      border-radius:50%;
-      box-shadow:
-        0 0 0 28px rgba(103,232,249,.025),
-        0 0 0 56px rgba(103,232,249,.018);
+      left:-28px;right:-28px;bottom:-36px;height:70px;
+      background:radial-gradient(ellipse at center,rgba(50,184,255,.38),transparent 68%);
+      filter:blur(10px);
+      pointer-events:none;
     }
 
-    .hero-grid{
-      position:absolute;inset:0;pointer-events:none;opacity:.3;
-      background:
-        linear-gradient(115deg,transparent 0 42%,rgba(255,255,255,.028) 42% 43%,transparent 43% 100%);
+    .frame-lines{
+      position:absolute;
+      inset:12px;
+      border:1px solid rgba(115,232,255,.06);
+      border-radius:25px;
+      pointer-events:none;
     }
+    .frame-lines::before,.frame-lines::after{
+      content:"";
+      position:absolute;
+      width:34px;height:34px;
+      border-color:rgba(115,232,255,.28);
+    }
+    .frame-lines::before{right:-1px;top:-1px;border-top:2px solid;border-right:2px solid;border-radius:0 13px 0 0}
+    .frame-lines::after{left:-1px;bottom:-1px;border-left:2px solid;border-bottom:2px solid;border-radius:0 0 0 13px}
 
-    .hero-content{position:relative;z-index:2}
-    .eyebrow{
+    .hero-content{position:relative;z-index:1}
+    .hero-badge{
       display:inline-flex;align-items:center;gap:7px;
-      padding:7px 10px;border:1px solid rgba(103,232,249,.16);
-      border-radius:999px;background:rgba(56,189,248,.07);
-      color:#c9f5ff;font-size:10px;font-weight:700;letter-spacing:.5px;
+      padding:7px 10px;
+      border-radius:999px;
+      color:#d9f8ff;
+      border:1px solid rgba(115,232,255,.16);
+      background:rgba(50,184,255,.07);
+      font-size:10px;
+      font-weight:700;
     }
-    .eyebrow i{
-      width:7px;height:7px;border-radius:50%;background:var(--cyan);
-      box-shadow:0 0 14px rgba(103,232,249,.8);
+    .hero-badge i{
+      width:6px;height:6px;border-radius:50%;
+      background:var(--cyan);
+      box-shadow:0 0 12px rgba(115,232,255,.85);
     }
 
     h1{
-      max-width:300px;
-      margin:17px 0 9px;
-      font-size:clamp(31px,8vw,43px);
-      line-height:1.03;
-      letter-spacing:-1.3px;
+      margin:16px 0 9px;
+      font-family:"Alexandria",sans-serif;
+      font-size:clamp(29px,8vw,40px);
+      line-height:1.18;
+      letter-spacing:-1px;
+      font-weight:800;
     }
 
     .hero p{
-      margin:0;max-width:290px;color:#a7b5ca;
-      font-size:13px;line-height:1.75;font-weight:550;
+      margin:0;
+      max-width:340px;
+      color:#a9b9c8;
+      font-size:13px;
+      line-height:1.9;
+      font-weight:500;
     }
 
-    .chips{
-      display:flex;flex-wrap:wrap;gap:7px;margin-top:17px;
+    .keywords{
+      display:flex;flex-wrap:wrap;gap:7px;
+      margin-top:17px;
     }
-    .chip{
-      padding:7px 10px;border-radius:11px;
-      border:1px solid rgba(255,255,255,.08);
+    .keyword{
+      padding:7px 10px;
+      border-radius:11px;
+      border:1px solid rgba(255,255,255,.07);
       background:rgba(255,255,255,.045);
-      color:#d8e4f4;font-size:10px;font-weight:700;
-    }
-
-    .controller-art{
-      position:absolute;
-      left:-8px;
-      bottom:-10px;
-      width:190px;
-      z-index:1;
-      transform:rotate(-8deg);
-      filter:drop-shadow(0 24px 28px rgba(0,0,0,.30));
-      animation:floatArt 5.5s ease-in-out infinite;
-      pointer-events:none;
-      user-select:none;
+      color:#d6e9f7;
+      font-size:10px;
+      font-weight:700;
     }
 
     .section-head{
-      display:flex;align-items:end;justify-content:space-between;
-      gap:14px;margin:25px 3px 12px;
-    }
-    .section-head h2{font-size:15px;margin:0;letter-spacing:.1px}
-    .section-head span{font-size:10px;color:var(--muted)}
-
-    .store-card{
-      position:relative;
-      overflow:hidden;
-      min-height:177px;
       display:flex;
       align-items:flex-end;
-      padding:22px;
-      border-radius:30px;
-      border:1px solid rgba(106,209,255,.20);
+      justify-content:space-between;
+      gap:12px;
+      margin:24px 3px 11px;
+    }
+    .section-head h2{
+      margin:0;
+      font-family:"Alexandria",sans-serif;
+      font-size:14px;
+      font-weight:700;
+    }
+    .section-head span{font-size:10px;color:#728aa1}
+
+    .card-frame{
+      position:relative;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:0 18px 48px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.045);
+    }
+    .card-frame::before{
+      content:"";
+      position:absolute;
+      inset:9px;
+      border:1px solid rgba(115,232,255,.045);
+      border-radius:inherit;
+      pointer-events:none;
+    }
+    .card-frame::after{
+      content:"";
+      position:absolute;
+      width:130px;height:130px;border-radius:50%;
+      left:-55px;bottom:-68px;
+      background:radial-gradient(circle,rgba(50,184,255,.18),transparent 68%);
+      pointer-events:none;
+    }
+
+    .store-card{
+      min-height:154px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+      padding:20px;
+      color:var(--text);
+      text-decoration:none;
+      border-radius:28px;
+      background:
+        radial-gradient(circle at 86% 18%,rgba(115,232,255,.13),transparent 22%),
+        linear-gradient(135deg,#0f2a48,#0b1e34 54%,#0b1829);
+      opacity:0;transform:translateY(12px);
+      animation:cardIn .55s .10s ease forwards;
+      transition:.18s ease;
+    }
+    .store-card:active{transform:scale(.985)}
+
+    .iconbox{
+      width:58px;height:58px;
+      flex:0 0 58px;
+      display:grid;place-items:center;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,.10);
+      color:#dff8ff;
+      background:linear-gradient(145deg,rgba(50,184,255,.28),rgba(36,141,255,.12));
+      box-shadow:0 13px 28px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.09);
+      position:relative;z-index:1;
+    }
+    .iconbox svg{width:28px;height:28px}
+
+    .store-copy{display:flex;flex-direction:column;gap:4px;position:relative;z-index:1;min-width:0}
+    .store-copy small{font-size:9px;letter-spacing:.55px;color:#7f9bb3}
+    .store-copy strong{
+      font-family:"Alexandria",sans-serif;
+      font-size:18px;
+      font-weight:700;
+    }
+    .store-copy span{font-size:11px;color:#91a7bc}
+
+    .arrow{
+      margin-inline-start:auto;
+      width:34px;height:34px;
+      flex:0 0 34px;
+      display:grid;place-items:center;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.08);
+      color:var(--cyan);
+      background:rgba(255,255,255,.045);
+      position:relative;z-index:1;
+    }
+    .arrow svg{width:16px;height:16px}
+
+    .community-list{
+      display:grid;
+      gap:10px;
+    }
+
+    .community-card{
+      min-height:106px;
+      display:flex;
+      align-items:center;
+      gap:13px;
+      padding:16px;
+      color:var(--text);
+      text-decoration:none;
+      border-radius:25px;
+      background:linear-gradient(135deg,rgba(15,38,63,.98),rgba(8,24,41,.98));
+      opacity:0;transform:translateY(12px);
+      animation:cardIn .55s ease forwards;
+      transition:.18s ease;
+    }
+    .community-card:nth-child(1){animation-delay:.16s}
+    .community-card:nth-child(2){animation-delay:.22s}
+    .community-card:active{transform:scale(.985)}
+
+    .brand-icon{
+      width:52px;height:52px;
+      flex:0 0 52px;
+      display:grid;place-items:center;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.16);
+      box-shadow:0 12px 27px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.20);
+      position:relative;z-index:1;
+    }
+    .brand-icon.telegram{background:linear-gradient(145deg,#2AABEE,#168ACD)}
+    .brand-icon.whatsapp{background:linear-gradient(145deg,#25D366,#128C7E)}
+    .brand-icon img{
+      width:25px;height:25px;display:block;
+      filter:brightness(0) invert(1);
+    }
+
+    .community-copy{
+      min-width:0;
+      display:flex;flex-direction:column;gap:3px;
+      position:relative;z-index:1;
+    }
+    .community-copy small{font-size:9px;color:#7992a9;letter-spacing:.45px}
+    .community-copy strong{
+      font-family:"Alexandria",sans-serif;
+      font-size:13px;
+      line-height:1.55;
+      font-weight:700;
+    }
+    .community-copy span{font-size:10px;color:#89a0b5}
+
+    .support{
+      margin-top:10px;
+      min-height:93px;
+      display:flex;align-items:center;gap:13px;
+      padding:15px 16px;
+      border-radius:25px;
       color:var(--text);
       text-decoration:none;
       background:
-        radial-gradient(circle at 85% 18%,rgba(103,232,249,.21),transparent 25%),
-        linear-gradient(135deg,#10213c 0%,#0d1830 48%,#131334 100%);
-      box-shadow:0 22px 54px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.08);
-      transform:translateY(12px);
-      opacity:0;
-      animation:cardIn .62s .08s cubic-bezier(.2,.8,.2,1) forwards;
-      transition:transform .22s ease,border-color .22s ease;
-    }
-    .store-card:active{transform:scale(.985)}
-    .store-card::before{
-      content:"";
-      position:absolute;
-      width:170px;height:170px;border-radius:50%;
-      right:-76px;top:-78px;
-      border:1px solid rgba(103,232,249,.13);
-      box-shadow:0 0 0 24px rgba(103,232,249,.025),0 0 0 48px rgba(103,232,249,.017);
-    }
-
-    .store-copy{position:relative;z-index:2;display:flex;flex-direction:column;gap:4px}
-    .store-copy small{color:#8fa4bf;font-size:10px;font-weight:700;letter-spacing:.5px}
-    .store-copy strong{font-size:22px;line-height:1.15}
-    .store-copy span{color:#a8b8cc;font-size:11px}
-
-    .store-icon{
-      position:absolute;
-      left:21px;top:22px;
-      width:64px;height:64px;border-radius:21px;
-      display:grid;place-items:center;
-      color:#dff8ff;
-      background:linear-gradient(145deg,rgba(56,189,248,.34),rgba(124,58,237,.22));
-      border:1px solid rgba(255,255,255,.11);
-      box-shadow:0 16px 36px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.12);
-    }
-    .store-icon svg{width:31px;height:31px}
-    .store-arrow{
-      position:absolute;left:22px;bottom:21px;width:34px;height:34px;border-radius:13px;
-      display:grid;place-items:center;background:rgba(255,255,255,.075);
-      border:1px solid rgba(255,255,255,.09);color:var(--cyan);
-    }
-    .store-arrow svg{width:16px;height:16px}
-
-    .cards{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:11px;
-    }
-
-    .card{
-      min-height:173px;
-      position:relative;
-      overflow:hidden;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      padding:17px;
-      border:1px solid var(--line);
-      border-radius:26px;
-      color:var(--text);
-      text-decoration:none;
-      background:linear-gradient(160deg,rgba(17,28,51,.96),rgba(9,16,30,.96));
-      box-shadow:0 18px 40px rgba(0,0,0,.20),inset 0 1px 0 rgba(255,255,255,.06);
-      opacity:0;transform:translateY(14px);
-      animation:cardIn .58s cubic-bezier(.2,.8,.2,1) forwards;
-      transition:transform .18s ease,border-color .18s ease,background .18s ease;
-    }
-    .card:nth-child(1){animation-delay:.14s}
-    .card:nth-child(2){animation-delay:.20s}
-    .card:active{transform:scale(.975)}
-    .card::after{
-      content:"";
-      position:absolute;width:105px;height:105px;border-radius:50%;
-      left:-45px;bottom:-48px;
-      background:radial-gradient(circle,rgba(56,189,248,.14),transparent 65%);
-    }
-
-    .card-icon{
-      width:50px;height:50px;border-radius:17px;
-      display:grid;place-items:center;
-      color:#dff8ff;
-      background:rgba(255,255,255,.055);
-      border:1px solid rgba(255,255,255,.09);
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 10px 24px rgba(0,0,0,.18);
-    }
-    .card-icon.telegram{
-      background:linear-gradient(145deg,#2AABEE,#168ACD);
-      border-color:rgba(255,255,255,.18);
-      box-shadow:0 12px 28px rgba(42,171,238,.20),inset 0 1px 0 rgba(255,255,255,.22);
-    }
-    .card-icon.whatsapp{
-      background:linear-gradient(145deg,#25D366,#128C7E);
-      border-color:rgba(255,255,255,.16);
-      box-shadow:0 12px 28px rgba(37,211,102,.16),inset 0 1px 0 rgba(255,255,255,.20);
-    }
-    .brand-logo{
-      width:25px;
-      height:25px;
-      display:block;
-      filter:brightness(0) invert(1);
-      object-fit:contain;
-    }
-    .card-icon svg{width:25px;height:25px}
-
-    .card-copy{position:relative;z-index:2}
-    .card-copy small{display:block;color:#8295af;font-size:9px;margin-bottom:6px;letter-spacing:.4px}
-    .card-copy strong{display:block;font-size:14px;line-height:1.45;letter-spacing:-.1px}
-    .card-copy span{display:block;margin-top:5px;color:#91a2b9;font-size:10px;line-height:1.45}
-
-    .support{
-      margin-top:11px;
-      min-height:84px;
-      position:relative;overflow:hidden;
-      display:flex;align-items:center;gap:13px;
-      padding:14px 15px;
-      border:1px solid rgba(52,211,153,.13);
-      border-radius:24px;
-      color:var(--text);text-decoration:none;
-      background:linear-gradient(100deg,rgba(16,35,43,.92),rgba(8,18,28,.96));
-      box-shadow:0 16px 36px rgba(0,0,0,.17),inset 0 1px 0 rgba(255,255,255,.05);
-      opacity:0;transform:translateY(14px);
-      animation:cardIn .58s .26s cubic-bezier(.2,.8,.2,1) forwards;
+        radial-gradient(circle at 88% 18%,rgba(37,211,102,.11),transparent 22%),
+        linear-gradient(135deg,#102a32,#091b26);
+      opacity:0;transform:translateY(12px);
+      animation:cardIn .55s .28s ease forwards;
+      transition:.18s ease;
     }
     .support:active{transform:scale(.985)}
-    .support .card-icon{flex:0 0 50px;background:linear-gradient(145deg,rgba(52,211,153,.23),rgba(52,211,153,.07));color:#c8ffec}
-    .support-copy{display:flex;flex-direction:column;gap:3px}
-    .support-copy strong{font-size:13px}
-    .support-copy span{font-size:10px;color:#8da3a7}
-    .support-arrow{margin-inline-start:auto;color:#8becc7;display:grid;place-items:center}
-    .support-arrow svg{width:18px;height:18px}
 
     .about{
-      margin-top:23px;
-      padding:17px 18px;
-      border:1px solid rgba(255,255,255,.075);
-      border-radius:22px;
-      color:#8394ad;
+      margin-top:21px;
+      padding:16px 17px;
+      border-radius:21px;
+      border:1px solid rgba(255,255,255,.06);
       background:rgba(255,255,255,.025);
+      color:#8299ae;
       font-size:11px;
-      line-height:1.8;
+      line-height:1.9;
       text-align:center;
     }
-    .about strong{color:#cfdced;font-weight:750}
+    .about strong{color:#c9d9e7;font-weight:700}
 
-    footer{padding-top:16px}
+    footer{padding-top:13px}
     .credit{
       position:relative;
+      overflow:hidden;
       display:flex;align-items:center;gap:11px;
       padding:12px 13px;
-      border:1px solid rgba(255,255,255,.095);
-      border-radius:21px;
-      color:#d9e5f5;
+      border:1px solid rgba(115,232,255,.10);
+      border-radius:20px;
+      color:#dcebf7;
       text-decoration:none;
-      background:linear-gradient(120deg,rgba(255,255,255,.055),rgba(255,255,255,.025));
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.055);
-      overflow:hidden;
-      transition:transform .18s ease,border-color .18s ease;
+      background:
+        radial-gradient(circle at 0% 100%,rgba(50,184,255,.10),transparent 30%),
+        rgba(255,255,255,.03);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+      transition:.18s ease;
     }
     .credit:active{transform:scale(.985)}
-    .credit::before{
-      content:"";
-      position:absolute;width:110px;height:110px;left:-55px;top:-64px;border-radius:50%;
-      background:radial-gradient(circle,rgba(56,189,248,.16),transparent 70%);
-    }
 
     .aziz-mark{
-      width:38px;height:38px;border-radius:13px;
+      width:39px;height:39px;
+      flex:0 0 39px;
       display:grid;place-items:center;
-      flex:0 0 38px;
-      font-weight:900;font-size:18px;
-      border:1px solid rgba(103,232,249,.18);
-      color:#dcf8ff;
-      background:linear-gradient(145deg,rgba(56,189,248,.18),rgba(124,58,237,.10));
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+      border-radius:13px;
+      border:1px solid rgba(115,232,255,.15);
+      background:linear-gradient(145deg,rgba(50,184,255,.16),rgba(36,141,255,.07));
+      color:#dff8ff;
+      font-family:"Alexandria",sans-serif;
+      font-size:17px;
+      font-weight:800;
     }
 
-    .credit-copy{min-width:0;display:flex;flex-direction:column;gap:3px}
-    .credit-copy small{font-size:9px;color:#72859e;letter-spacing:.3px}
-    .credit-copy strong{font-size:11px;line-height:1.45}
-    .credit svg{margin-inline-start:auto;width:16px;height:16px;color:#86dfff}
+    .credit-copy{display:flex;flex-direction:column;gap:2px;min-width:0}
+    .credit-copy small{font-size:8.5px;color:#6f879d;letter-spacing:.5px}
+    .credit-copy strong{font-size:11px;font-weight:700;line-height:1.55}
+    .credit svg{width:16px;height:16px;margin-inline-start:auto;color:#7edfff}
 
     .toast{
       position:fixed;
-      left:50%;bottom:calc(18px + env(safe-area-inset-bottom));
+      left:50%;
+      bottom:calc(18px + env(safe-area-inset-bottom));
       transform:translate(-50%,20px);
-      padding:10px 14px;
-      border:1px solid rgba(255,255,255,.11);
-      border-radius:14px;
-      color:#eaf7ff;
-      background:rgba(10,18,33,.92);
-      backdrop-filter:blur(20px);
-      -webkit-backdrop-filter:blur(20px);
-      box-shadow:0 15px 45px rgba(0,0,0,.30);
-      font-size:11px;
-      opacity:0;pointer-events:none;
-      transition:.25s ease;
+      opacity:0;
+      pointer-events:none;
       z-index:20;
+      padding:10px 14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      color:#eaf8ff;
+      background:rgba(7,19,33,.93);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      box-shadow:0 14px 40px rgba(0,0,0,.30);
+      font-size:11px;
+      transition:.24s ease;
     }
     .toast.show{opacity:1;transform:translate(-50%,0)}
 
-    @keyframes fadeDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
-    @keyframes heroIn{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}
-    @keyframes cardIn{to{opacity:1;transform:none}}
-    @keyframes floatArt{0%,100%{transform:rotate(-8deg) translateY(0)}50%{transform:rotate(-6deg) translateY(-7px)}}
-
-    @media (hover:hover){
-      .share:hover,.credit:hover{border-color:rgba(103,232,249,.22);background:rgba(255,255,255,.07)}
-      .store-card:hover,.card:hover{transform:translateY(-2px);border-color:rgba(103,232,249,.22)}
+    @keyframes rise{
+      from{opacity:0;transform:translateY(10px)}
+      to{opacity:1;transform:none}
+    }
+    @keyframes cardIn{
+      to{opacity:1;transform:none}
     }
 
-    @media (max-width:365px){
+    @media (hover:hover){
+      .share:hover,.credit:hover{border-color:rgba(115,232,255,.20);background-color:rgba(255,255,255,.055)}
+      .store-card:hover,.community-card:hover,.support:hover{transform:translateY(-2px);border-color:rgba(115,232,255,.24)}
+    }
+
+    @media (max-width:360px){
       .app{padding-inline:12px}
-      .hero{padding-inline:20px}
-      .cards{gap:9px}
-      .card{padding:15px;min-height:168px}
-      .card-copy strong{font-size:13px}
+      .hero{padding-inline:18px}
+      .store-card{padding:17px}
+      .community-card{padding:14px}
+      .community-copy strong{font-size:12px}
     }
 
     @media (prefers-reduced-motion:reduce){
       *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-      .store-card,.card,.support{opacity:1;transform:none}
+      .store-card,.community-card,.support{opacity:1;transform:none}
     }
   </style>
 </head>
 
 <body>
   <main class="app">
+
     <header class="topbar">
-      <div class="brand-pill" aria-label="BEST GAMES">
-        <img src="https://cdn.salla.sa/xArQDz/TH0uwccAW8ilcKDx59FFgmtgWqgkyA73L1QkUxL8.jpg" alt="شعار BEST GAMES" width="68" height="68" />
-        <span class="brand-copy">
+      <div class="identity">
+        <img class="identity-logo" src="https://cdn.salla.sa/xArQDz/TH0uwccAW8ilcKDx59FFgmtgWqgkyA73L1QkUxL8.jpg" alt="شعار BEST GAMES" width="86" height="86" />
+        <span class="identity-copy">
           <strong>BEST GAMES</strong>
-          <span>Official community</span>
+          <span>Official Community</span>
         </span>
       </div>
 
@@ -502,48 +537,41 @@
     </header>
 
     <section class="hero" aria-labelledby="page-title">
-      <div class="hero-grid" aria-hidden="true"></div>
+      <span class="frame-lines" aria-hidden="true"></span>
       <div class="hero-content">
-        <span class="eyebrow"><i aria-hidden="true"></i> المجتمع الرسمي</span>
-        <h1 id="page-title">مجتمع<br>BEST GAMES</h1>
-        <p>كل روابط المتجر والدعم والشروحات في واجهة واحدة سريعة وواضحة.</p>
+        <span class="hero-badge"><i aria-hidden="true"></i> المجتمع الرسمي</span>
+        <h1 id="page-title">مجتمع BEST GAMES</h1>
+        <p>كل روابط المتجر والدعم والشروحات في مكان واحد، بتجربة سريعة وواضحة ومصممة للجوال.</p>
 
-        <div class="chips" aria-label="اهتمامات المجتمع">
-          <span class="chip">سوني 4 معدل</span>
-          <span class="chip">سوني فور برو معدل</span>
+        <div class="keywords" aria-label="اهتمامات المجتمع">
+          <span class="keyword">سوني 4 معدل</span>
+          <span class="keyword">سوني فور برو معدل</span>
         </div>
       </div>
-
-      <img class="controller-art"
-        src="https://gmedia.playstation.com/is/image/SIEPDC/ps4-accessories-ds4-jet-black-screen-01-en-28oct20?%24800px%24="
-        alt=""
-        width="800"
-        height="600"
-        loading="eager"
-        decoding="async"
-        aria-hidden="true" />
     </section>
 
     <div class="section-head">
-      <h2>روابط BEST GAMES</h2>
-      <span>كلها رسمية</span>
+      <h2>المتجر الرسمي</h2>
+      <span>BEST-GAMES7.COM</span>
     </div>
 
-    <a class="store-card" href="https://best-games7.com" target="_blank" rel="noopener noreferrer" aria-label="زيارة متجر BEST GAMES الرسمي">
-      <span class="store-icon" aria-hidden="true">
+    <a class="store-card card-frame" href="https://best-games7.com" target="_blank" rel="noopener noreferrer" aria-label="زيارة متجر BEST GAMES الرسمي">
+      <span class="iconbox" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 9.5 5.2 4h13.6L21 9.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9 20v-5h6v5"/>
+          <path d="M3 9.5 5.2 4h13.6L21 9.5"/>
+          <path d="M5 9.5V20h14V9.5"/>
+          <path d="M9 20v-5h6v5"/>
           <path d="M3 9.5c0 1.3 1.1 2.5 2.5 2.5S8 10.8 8 9.5c0 1.3 1.1 2.5 2.5 2.5S13 10.8 13 9.5c0 1.3 1.1 2.5 2.5 2.5S18 10.8 18 9.5c0 1.3 1.1 2.5 2.5 2.5S23 10.8 23 9.5" transform="translate(-1)"/>
         </svg>
       </span>
 
       <span class="store-copy">
-        <small>BEST-GAMES7.COM</small>
+        <small>OFFICIAL STORE</small>
         <strong>زيارة المتجر</strong>
-        <span>المتجر الرسمي لـ BEST GAMES</span>
+        <span>المنتجات والخدمات الرسمية لـ BEST GAMES</span>
       </span>
 
-      <span class="store-arrow" aria-hidden="true">
+      <span class="arrow" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="m9 18 6-6-6-6"/>
         </svg>
@@ -551,43 +579,57 @@
     </a>
 
     <div class="section-head">
-      <h2>مجتمعاتنا</h2>
+      <h2>مجتمعات BEST GAMES</h2>
       <span>Telegram</span>
     </div>
 
-    <section class="cards" aria-label="مجتمعات BEST GAMES على تيليجرام">
-      <a class="card" href="https://t.me/ps4heeen" target="_blank" rel="noopener noreferrer" aria-label="مجتمع ملاك سوني4 المعدل على تيليجرام">
-        <span class="card-icon telegram" aria-hidden="true">
-          <img class="brand-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/telegram.svg" alt="" width="25" height="25" />
+    <section class="community-list" aria-label="مجتمعات BEST GAMES على تيليجرام">
+
+      <a class="community-card card-frame" href="https://t.me/ps4heeen" target="_blank" rel="noopener noreferrer" aria-label="مجتمع ملاك سوني4 المعدل على تيليجرام">
+        <span class="brand-icon telegram" aria-hidden="true">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/telegram.svg" alt="" width="25" height="25" />
         </span>
-        <span class="card-copy">
-          <small>COMMUNITY 01</small>
-          <strong>مجتمع ملاك<br>سوني4 المعدل</strong>
-          <span>المجتمع المتخصص للملاك</span>
+        <span class="community-copy">
+          <small>TELEGRAM COMMUNITY</small>
+          <strong>مجتمع ملاك سوني4 المعدل</strong>
+          <span>المجتمع المتخصص لملاك الأجهزة المعدلة</span>
+        </span>
+        <span class="arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </span>
       </a>
 
-      <a class="card" href="https://t.me/HeenPS4" target="_blank" rel="noopener noreferrer" aria-label="مجتمع BestGames للشروحات على تيليجرام">
-        <span class="card-icon telegram" aria-hidden="true">
-          <img class="brand-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/telegram.svg" alt="" width="25" height="25" />
+      <a class="community-card card-frame" href="https://t.me/HeenPS4" target="_blank" rel="noopener noreferrer" aria-label="مجتمع BestGames للشروحات على تيليجرام">
+        <span class="brand-icon telegram" aria-hidden="true">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/telegram.svg" alt="" width="25" height="25" />
         </span>
-        <span class="card-copy">
-          <small>COMMUNITY 02</small>
-          <strong>مجتمع BestGames<br>للشروحات</strong>
-          <span>شروحات ومحتوى المجتمع</span>
+        <span class="community-copy">
+          <small>TELEGRAM COMMUNITY</small>
+          <strong>مجتمع BestGames للشروحات</strong>
+          <span>شروحات ومحتوى المجتمع في مكان واحد</span>
+        </span>
+        <span class="arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </span>
       </a>
+
     </section>
 
-    <a class="support" href="https://wa.me/message/UPP223I77J3KJ1" target="_blank" rel="noopener noreferrer" aria-label="التواصل مع BEST GAMES عبر واتساب">
-      <span class="card-icon whatsapp" aria-hidden="true">
-        <img class="brand-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/whatsapp.svg" alt="" width="25" height="25" />
+    <div class="section-head">
+      <h2>الدعم والتواصل</h2>
+      <span>WhatsApp</span>
+    </div>
+
+    <a class="support card-frame" href="https://wa.me/message/UPP223I77J3KJ1" target="_blank" rel="noopener noreferrer" aria-label="التواصل مع BEST GAMES عبر واتساب">
+      <span class="brand-icon whatsapp" aria-hidden="true">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/whatsapp.svg" alt="" width="25" height="25" />
       </span>
-      <span class="support-copy">
+      <span class="community-copy">
+        <small>DIRECT SUPPORT</small>
         <strong>تواصل مباشر عبر واتساب</strong>
         <span>للأسئلة والاستفسارات عن المتجر</span>
       </span>
-      <span class="support-arrow" aria-hidden="true">
+      <span class="arrow" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
       </span>
     </a>
@@ -600,7 +642,7 @@
       <a class="credit" href="https://3zizlab.com" target="_blank" rel="noopener noreferrer" aria-label="تصميم وتطوير تجربة المستخدم بواسطة Aziz Lab">
         <span class="aziz-mark" aria-hidden="true">3</span>
         <span class="credit-copy">
-          <small>DESIGN &amp; EXPERIENCE</small>
+          <small>DESIGN & EXPERIENCE</small>
           <strong>تصميم وتطوير تجربة المستخدم بواسطة Aziz Lab</strong>
         </span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -608,6 +650,7 @@
         </svg>
       </a>
     </footer>
+
   </main>
 
   <div class="toast" id="toast" role="status" aria-live="polite">تم نسخ رابط الصفحة</div>
